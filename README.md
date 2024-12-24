@@ -5,7 +5,7 @@
 This project aims to progress my learning in using Docker on GitHub and setting up a wiki with heavily detailed documentation.
 
 ### Project Goals
-- **Learn Docker**: Gain a comprehensive understanding of Docker, including containerization, images, and orchestration.
+- **[Learn Docker](readme/Learn_Docker.man)**: Gain a comprehensive understanding of Docker, including containerization, images, and orchestration.
 - **GitHub Integration**: Explore how to effectively use GitHub for version control and collaboration.
 - **Wiki Setup**: Create a detailed wiki to document the learning process, project structure, and any relevant information.
 
