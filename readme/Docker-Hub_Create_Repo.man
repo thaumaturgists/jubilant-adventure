@@ -1,0 +1,43 @@
+.TH DOCKER-HUB 1 "December 2024" "Docker Hub Manual" "User Commands"
+.SH NAME
+docker-hub \- Overview and repository management on Docker Hub
+
+.SH DESCRIPTION
+Docker Hub is an online platform for storing and sharing Docker images, which are packages that contain everything needed to run applications. It serves as a library where users can organize and manage their Docker images effectively.
+
+.SH REPOSITORY
+A repository is a storage space within Docker Hub where Docker images are kept. It helps users organize their applications for easy access and management.
+
+.SH CREATING A REPOSITORY ON DOCKER HUB
+Creating a repository on Docker Hub is a straightforward process. Follow these steps:
+
+.SS 1. Log in to Docker Hub
+- Visit the Docker Hub website: https://hub.docker.com/
+- Click on the "Sign In" button at the top right corner and enter your username and password.
+
+.SS 2. Access Your Dashboard
+- After logging in, you will be directed to your dashboard, where you can view all your repositories.
+
+.SS 3. Navigate to the Repositories Section
+- Locate the "Repositories" section on your dashboard. This is where all your repositories are listed.
+
+.SS 4. Create a New Repository
+- Click on the "Create Repository" button or the "+" sign to initiate the creation of a new repository.
+
+.SS 5. Fill in Repository Details
+- **Repository Name**: Enter a unique name for your repository.
+- **Description**: (Optional) Provide a brief description of the repository's purpose.
+- **Visibility**: Choose between public (accessible to everyone) or private (accessible only to you and invited users).
+- **Additional Settings**: Configure any additional options as needed.
+
+.SS 6. Finalize Repository Creation
+- Click the "Create" button to finalize the creation of your repository.
+
+.SH AFTER CREATING A REPOSITORY
+Once your repository is created, you can start uploading your Docker images. If the repository is public, you can share it with others; if private, it remains accessible only to you and those you invite.
+
+.SH SUMMARY
+Creating a repository on Docker Hub is akin to establishing a new shelf in a library for storing and sharing Docker images. By following the outlined steps, users can efficiently manage their applications and contribute to the Docker community.
+
+.SH SEE ALSO
+docker(1), docker-compose(1)
