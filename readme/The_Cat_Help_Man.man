@@ -1,0 +1,75 @@
+.\" Man page for understanding cat for man
+.TH MANPAGES 1 "December 2024" "1.0" "User Commands"
+.SH NAME
+manpages \- Understanding Man Pages and Commands
+.SH SYNOPSIS
+manpages
+.SH DESCRIPTION
+A man page (short for "manual page") is a help guide for computer programs. 
+When you want to learn how to use a command in the terminal (a place where you can type commands to tell the computer what to do), you can look up its man page to see what it does and how to use it.
+
+.SH COMMANDS
+.TP
+.B cat
+The `cat` command is used in the terminal to read the contents of a file. 
+It is like opening a book and reading it out loud. If you have a file with text in it, you can use `cat` to see all that text on your screen.
+
+.TP
+.B man
+The `man` command helps you read man pages. 
+It is a special tool that opens the book (the man page) and makes it easier to read by showing you one page at a time and allowing you to scroll up and down.
+
+.SH MAN PAGE STORAGE
+Man pages are stored in special folders on your computer, similar to libraries where help books are kept. Common locations include:
+.IP
+/usr/share/man
+.IP
+/usr/local/share/man
+
+.SH READING A MAN PAGE WITH CAT
+If you want to read a man page using `cat`, you need to know where the man page file is located. Man pages are organized into sections, like chapters in a book. For example:
+.TP
+Section 1
+User commands (like `ls`).
+.TP
+Section 5
+File formats (like how a text file is structured).
+
+.SH EXAMPLE: READING THE LS COMMAND MAN PAGE
+1. Find the Man Page Location: For the `ls` command, look for a file called `ls.1`. The `.1` means it’s in section 1.
+
+2. Use `cat` to Read the Man Page:
+.nf
+.B cat /usr/share/man/man1/ls.1.gz | gunzip | less
+.fi
+Here’s what each part does:
+.TP
+.B cat /usr/share/man/man1/ls.1.gz
+This tells `cat` to read the `ls` man page file, which is compressed (like a squished balloon), so it has a `.gz` at the end.
+.TP
+.B gunzip
+This decompresses the squished file so you can read it.
+.TP
+.B less
+This allows you to scroll through the text easily, like flipping through the pages of a book.
+
+.SH USING MAN INSTEAD
+While you can use `cat` to read man pages, it is usually easier to use the `man` command:
+.nf
+.B man ls
+.fi
+This command finds the right man page, shows it in a nice format, and lets you scroll through it without needing to remember all those extra steps.
+
+.SH SUMMARY
+In summary:
+.IP
+- Man pages are like help books for commands.
+.IP
+- `cat` is a way to read files, but it’s not the best for man pages.
+.IP
+- `man` is the special command that makes reading man pages easy and organized.
+.IP
+- It’s usually better to use `man` because it helps you read the information in a way that’s easier to understand.
+
+.SH SEE ALSO
+man(1), cat(1)
