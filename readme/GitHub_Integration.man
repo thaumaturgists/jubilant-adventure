@@ -1,5 +1,5 @@
 .\" Manual page for Understanding GitHub for Kids
-.TH GITHUB-KIDS 1 "October 2024" "1.0" "Understanding GitHub for Kids"
+.TH GITHUB-KIDS 1 "December 2024" "1.0" "Understanding GitHub for Kids"
 .SH NAME
 Understanding GitHub for Kids - A simple guide to using GitHub for version control and collaboration.
 
