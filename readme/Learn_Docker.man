@@ -1,0 +1,79 @@
+.TH DOCKER 1 "October 2024" "Learning Docker: A Simple Guide" "User Commands"
+.SH NAME
+docker \- A simple guide to understanding Docker
+
+.SH DESCRIPTION
+Docker is like a special toy box for computer programs. It helps developers keep their programs and everything they need to run them in one neat package called a container.
+
+.SH CORE CONCEPTS
+
+.TP
+.B Containers
+Think of a container like a lunchbox. Just like you can pack your sandwich, fruit, and juice in a lunchbox, a container holds everything a program needs to run. This includes the program itself and all the things it needs, like special tools or libraries. Containers can run anywhere!
+
+.TP
+.B Images
+An image is like a recipe for making a lunchbox. It tells you what to put inside. When you want to create a new container, you start with an image. Images can be shared with others so they can make the same container too.
+
+.TP
+.B Dockerfile
+A Dockerfile is like a list of instructions for making your lunchbox. It tells you step-by-step how to pack your lunch. In Docker, a Dockerfile tells the computer how to build an image, including all the steps needed to set up the program and its environment.
+
+.SH DOCKER COMMANDS
+When you want to manage your containers and images, you use commands. Here are some important commands:
+
+.TP
+.B docker run
+Starts a container from an image.
+
+.TP
+.B docker build
+Creates an image from a Dockerfile.
+
+.TP
+.B docker ps
+Shows all the containers that are currently running.
+
+.TP
+.B docker stop
+Stops a running container.
+
+.SH DOCKER COMPOSE
+Docker Compose helps you organize many containers that work together, just like having different lunchboxes for sandwiches, snacks, and drinks. You write a simple file that tells Docker how to set everything up.
+
+.SH ORCHESTRATION
+Orchestration is like a party planner for containers. It helps manage many containers at once, ensuring they all work together smoothly. One popular tool for this is called Kubernetes.
+
+.SH NETWORKING AND STORAGE
+
+.TP
+.B Networking
+Containers can talk to each other through networking, helping them share information and work together.
+
+.TP
+.B Storage
+You can use volumes to store data that you want to keep safe, even if you stop or remove a container.
+
+.SH BEST PRACTICES
+Just like you want to pack your lunchbox neatly, there are best practices for using Docker:
+
+.TP
+.B Keep it simple
+Make sure each container does one job well.
+
+.TP
+.B Share your recipes
+If you find a great image, share it with your friends.
+
+.TP
+.B Stay safe
+Keep your containers secure from bad stuff.
+
+.SH HANDS-ON PRACTICE
+The best way to learn is by doing! Set up Docker on your computer and start creating your own containers. Try building a simple program and see how it works in a container.
+
+.SH RESOURCES
+To learn more about Docker, you can find videos, tutorials, and online courses. These are like fun guides that help you understand how to use Docker better.
+
+.SH CONCLUSION
+By thinking of Docker as a special toy box for programs, you can see how it helps developers keep everything organized and running smoothly. Happy learning!
