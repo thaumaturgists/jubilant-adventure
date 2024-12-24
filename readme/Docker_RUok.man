@@ -1,0 +1,134 @@
+.\" Man page for setting up a GitHub Actions workflow for Docker
+.TH DOCKER-WORKFLOW 1 "October 2024" "1.0" "GitHub Actions Workflow Manual"
+.SH NAME
+docker-workflow \- Set up a GitHub Actions workflow for building and pushing a Docker image
+
+.SH SYNOPSIS
+.B docker-workflow
+.RI [ options ]
+
+.SH DESCRIPTION
+This manual describes how to set up a GitHub Actions workflow for building and pushing a Docker image for a public repository called "jubilant-adventure".
+
+.SH STEPS
+
+.TP
+.B Step 1: Create Your GitHub Repository
+1. Create a public repository called "jubilant-adventure" on GitHub.
+2. Clone the repository to your local machine:
+.RS
+.nf
+git clone https://github.com/yourusername/jubilant-adventure.git
+cd jubilant-adventure
+.fi
+.RE
+
+.TP
+.B Step 2: Create Your Dockerfile
+1. In the root of your repository, create a file named "Dockerfile" with the following content:
+.RS
+.nf
+FROM r-base:latest
+
+RUN R -e "install.packages(c('ggplot2', 'dplyr', 'tidyverse'), repos='http://cran.rstudio.com/')"
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+CMD ["R"]
+.fi
+.RE
+
+.TP
+.B Step 3: Set Up GitHub Secrets
+1. Go to your GitHub repository, click on "Settings," then "Secrets and variables," and select "Actions."
+2. Click on "New repository secret" and add:
+.RS
+.nf
+DOCKER_USERNAME: Your Docker Hub username.
+DOCKER_PASSWORD: Your Docker Hub password or access token.
+.fi
+.RE
+
+.TP
+.B Step 4: Create the GitHub Actions Workflow
+1. Create a directory named ".github/workflows" and inside it, create a file named "docker-build-push.yml".
+2. Add the following content to "docker-build-push.yml":
+.RS
+.nf
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: your-dockerhub-username/your-image-name:latest
+
+      - name: Run Tests (Optional)
+        run: |
+          docker run --rm your-dockerhub-username/your-image-name:latest your-test-command
+.fi
+.RE
+
+.TP
+.B Step 5: Commit and Push Changes
+1. Commit your changes:
+.RS
+.nf
+git add .
+git commit -m "Add Dockerfile and GitHub Actions workflow"
+.fi
+.RE
+2. Push your changes to the main branch:
+.RS
+.nf
+git push origin main
+.fi
+.RE
+
+.TP
+.B Step 6: Monitor the Workflow
+1. Go to the "Actions" tab in your GitHub repository to monitor the progress of your workflow.
+
+.SH ADDITIONAL NOTES
+.TP
+- Testing: The optional test step can be customized to run specific tests on your Docker image. Replace "your-test-command" with the command you want to execute.
+.TP
+- Docker Hub Rate Limits: Be aware of Docker Hub's rate limits, especially if you are using a free account.
+.TP
+- Documentation: Consider adding a README file to your repository to document how to use the Docker image and any other relevant information.
+
+.SH AUTHOR
+This manual was created to assist users in setting up a GitHub Actions workflow for Docker.
+
+.SH SEE ALSO
+git(1), docker(1), github(1)
