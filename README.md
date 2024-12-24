@@ -2,12 +2,12 @@
 **undauntable(biannulate)**
 
 ## Where it Begins
-This project aims to progress my learning in using Docker on GitHub and setting up a wiki with heavily detailed documentation.
+This project aims to progress my learning R using Docker on GitHub and setting up a wiki with heavily detailed documentation.
 
 ### Project Goals
 - **[Learn Docker](readme/Learn_Docker.man)**: Gain a comprehensive understanding of Docker, including containerization, images, and orchestration.
 - **[GitHub Integration](readme/GitHub_Integration.man)**: Explore how to effectively use GitHub for version control and collaboration.
-- **Wiki Setup**: Create a detailed wiki to document the learning process, project structure, and any relevant information.
+- **[Wiki Setup](GitHub_Wiki_Setup.man)**: Create a detailed wiki to document the learning process, project structure, and any relevant information.
 
 ### Getting Started
 To get started with this project, follow these steps:
