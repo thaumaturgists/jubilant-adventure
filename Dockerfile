@@ -1,9 +1,9 @@
 FROM r-base:latest
 
-     RUN R -e "install.packages(c('ggplot2', 'dplyr', 'tidyverse'), repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages(c('ggplot2', 'dplyr', 'tidyverse'), repos='http://cran.rstudio.com/')"
 
-     WORKDIR /usr/src/app
+WORKDIR /usr/src/app
 
-     COPY . .
+COPY . .
 
-     CMD ["R"]
+CMD ["R"]
