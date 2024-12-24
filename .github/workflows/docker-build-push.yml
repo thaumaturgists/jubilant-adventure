@@ -1,4 +1,3 @@
-
 name: Build and Push Docker Image
 
 on:
@@ -26,12 +25,11 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: "{{defaultContext}}:mysubdir"
+          context: mysubdir  # Adjust this as needed
           push: true
-          tags: user/app:latest
+          tags: thaumaturgists/canamu:latest  # Replace with your actual Docker Hub username and repo
 
       - name: Run Tests (Optional)
         if: ${{ github.event_name == 'push' }}
         run: |
           docker run --rm thaumaturgists/canamu:latest npm test
-
