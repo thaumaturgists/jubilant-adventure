@@ -32,4 +32,4 @@ jobs:
       - name: Run Tests (Optional)
         if: ${{ github.event_name == 'push' }}
         run: |
-          docker run --rm thaumaturgists/canamu:latest npm test
+          docker run --rm thaumaturgists/r-base:latest npm test
