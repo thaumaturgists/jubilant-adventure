@@ -1,0 +1,44 @@
+.\" Manpage for man
+.TH MAN CJÂVRÍ 1 "December 2024" "1.0" "User Commands"
+.SH NAME
+man \- format and display the manual pages
+.SH SYNOPSIS
+.B man
+[\fIoptions\fR] [\fIcommand\fR...]
+.SH DESCRIPTION
+The \fBman\fR command is used to format and display the manual pages for various commands and utilities in the Unix-like operating systems. It serves as a reference guide for users to understand how to use different commands.
+
+.SH USAGE
+To use the \fBman\fR command, follow these steps:
+
+1. **Open the Terminal**:
+   The Terminal is a command-line interface where you can interact with your computer using text commands. It can be found in the Applications folder under Utilities.
+
+2. **Type \fBman\fR**:
+   To look up a command, type \fBman\fR followed by the command name. For example:
+   .B man ls
+   This command will display the manual page for the \fBls\fR command.
+
+.SH WHAT HAPPENS NEXT
+When you execute the command, the manual page for the specified command opens, providing the following information:
+
+- **Description**: A brief overview of what the command does.
+- **Options**: Special flags that modify the command's behavior.
+- **Examples**: Sample usages of the command.
+
+.SH NAVIGATING THE MANUAL
+- Use the up and down arrow keys to scroll through the manual page.
+- Press the `q` key to quit and return to the Terminal.
+
+.SH EXTRA FEATURES
+- **Search for Keywords**: To find commands related to a keyword, use:
+  .B man -k <keyword>
+  
+- **Short Descriptions**: For a brief summary of a command, use:
+  .B man -f <command>
+
+.SH WHY IS MAN USEFUL?
+The \fBman\fR command is an essential tool for learning how to use your computer effectively. It provides a comprehensive guide to the commands available, helping users to explore and utilize the full potential of their systems.
+
+.SH SEE ALSO
+Other related commands and utilities can be found in their respective manual pages.
