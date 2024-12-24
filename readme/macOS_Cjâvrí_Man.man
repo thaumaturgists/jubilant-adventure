@@ -1,0 +1,60 @@
+.\" Man page for the man command
+.TH MAN 1 "December 2024" "1.0" "User Commands"
+.SH NAME
+man \- display the manual pages for commands
+.SH SYNOPSIS
+.B man
+[\fIoptions\fR] [\fIcommand\fR]
+.SH DESCRIPTION
+The
+.B man
+command displays the manual pages for various commands, functions, and system calls available on macOS. It provides detailed documentation about the usage, options, and examples for a wide range of commands.
+
+To use the command, open the Terminal application and type:
+.PP
+.B man
+.I <command>
+.PP
+For example, to learn about the
+.B ls
+command, type:
+.PP
+.B man ls
+.SH NAVIGATING MANUAL PAGES
+Once the manual page is displayed, you can navigate using the following keys:
+.TP
+.B Arrow Keys
+Use the up and down arrow keys to scroll through the information.
+.TP
+.B q
+Press `q` to exit the manual page viewer.
+.SH OPTIONS
+The following options can be used with the
+.B man
+command:
+.TP
+.B -k \fIkeyword\fR
+Search the manual page names and descriptions for the specified keyword.
+.TP
+.B -f \fIcommand\fR
+Display a short description of the specified command.
+.SH EXAMPLES
+To display the manual page for the
+.B ls
+command:
+.PP
+.B man ls
+.PP
+To search for commands related to "list":
+.PP
+.B man -k list
+.PP
+To get a short description of the
+.B ls
+command:
+.PP
+.B man -f ls
+.SH SEE ALSO
+For more information, refer to the manual pages of other commands or the Terminal application documentation.
+.SH AUTHOR
+Written by Connor (thaumaturgists).
