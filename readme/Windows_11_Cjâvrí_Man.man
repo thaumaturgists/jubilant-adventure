@@ -1,0 +1,59 @@
+.\" Manpage for Windows 11 Help and Documentation
+.TH WINDOWS_11_CJÂVRÍ_MAN "December 2024" "User Manual" "Windows 11 Cjâvrí Man"
+.SH NAME
+windows_11_help \- Finding Help and Documentation in Windows 11
+
+.SH DESCRIPTION
+This manual page provides guidance on how to access help and documentation for commands and applications in Windows 11.
+
+.SH COMMANDS AND TOOLS
+
+.TP
+.B Windows Command Prompt and PowerShell
+These are command-line interfaces where users can type commands to instruct the computer.
+
+.TP
+.B help
+Use this command to display a list of available commands. It is similar to asking for a list of things you can do.
+
+.TP
+.B command_name /?
+To learn about a specific command, type this command. For example, `dir /?` shows information about the `dir` command, which lists files in a directory.
+
+.TP
+.B Windows Subsystem for Linux (WSL)
+WSL allows users to run a Linux environment directly on Windows. It provides access to Linux commands.
+
+.TP
+.B man
+If WSL is installed, the `man` command can be used to access manual pages for other commands.
+
+.TP
+.B Installing WSL
+To install WSL, follow these steps:
+1. Open PowerShell as an administrator.
+2. Run the command: `wsl --install`
+3. After installation, open WSL to use the `man` command.
+
+.TP
+.B Third-Party Tools
+These are additional programs that can be installed to provide Unix-like command-line utilities.
+
+.TP
+.B Cygwin
+A large collection of GNU and Open Source tools that provide functionality similar to a Linux distribution on Windows.
+
+.TP
+.B Git Bash
+Included with Git for Windows, Git Bash provides many Unix-like commands, but does not include the `man` command by default.
+
+.TP
+.B Documentation Files
+Many applications come with their own documentation files (often in `.txt` or `.md` format) that can be opened with any text editor. Check the installation directory for these files.
+
+.TP
+.B Online Documentation
+Official documentation for many software tools and programming languages is available online. Search for the specific tool or command for help.
+
+.SH SUMMARY
+In Windows 11, users can find help and documentation through built-in tools like Command Prompt and PowerShell, by installing WSL for Linux commands, using third-party tools, checking for documentation files, or looking online for help. Each method provides a way to access instructions and support.
