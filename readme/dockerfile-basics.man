@@ -1,4 +1,4 @@
-.TH DOCKERFILE 1 "December 2024" "Dockerfile Basics" "User Commands"
+.TH DOCKERFILE-BASICS 1 "December 2024" "Dockerfile Basics" "User Commands"
 .SH NAME
 dockerfile \- Basics of Dockerfile
 
