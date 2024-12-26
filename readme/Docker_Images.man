@@ -1,0 +1,99 @@
+.\" Man page for Docker Images
+.TH DOCKER-IMAGES 1 "December 2024" "1.0" "Docker Images Manual"
+.SH NAME
+docker-images \- Understanding Docker Images
+
+.SH SYNOPSIS
+.B docker-images
+[\-h] [--version]
+
+.SH DESCRIPTION
+Docker images are like recipes that contain everything needed to run a computer program. They are lightweight, portable, and can run anywhere Docker is installed.
+
+.SH KEY FEATURES
+
+.TP
+.B Layered Architecture
+Docker images are built in layers, similar to a sandwich. Each layer adds something new, allowing for efficient storage and sharing.
+
+.TP
+.B Version Control
+Images can be versioned using tags (e.g., mygame:1.0). This allows users to manage different versions of an application easily.
+
+.TP
+.B Portability
+Once created, Docker images can run on any system with Docker installed, ensuring consistent behavior across different environments.
+
+.TP
+.B Isolation
+Each container created from an image runs in its own isolated environment, preventing conflicts between applications.
+
+.SH BUILDING DOCKER IMAGES
+To create a Docker image, a Dockerfile is used. This file contains instructions for building the image.
+
+.TP
+.B FROM
+Specifies the base image to use.
+
+.TP
+.B WORKDIR
+Sets the working directory inside the container.
+
+.TP
+.B COPY or ADD
+Brings files from the host system into the image.
+
+.TP
+.B RUN
+Executes commands to install packages or modify the image.
+
+.TP
+.B EXPOSE
+Opens a port for communication with other programs.
+
+.TP
+.B CMD or ENTRYPOINT
+Specifies the command to run when the container starts.
+
+.SH EXAMPLE DOCKERFILE
+Here is a simple example of a Dockerfile:
+
+.nf
+.B .Dockerfile
+# Start with a base image
+FROM python:3.8-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy files into the image
+COPY . /app
+
+# Install packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Open a port
+EXPOSE 80
+
+# Set an environment variable
+ENV NAME World
+
+# Run the program when the container starts
+CMD ["python", "app.py"]
+.fi
+
+.SH MANAGING DOCKER IMAGES
+.TP
+.B Building an Image
+Use the command to build an image from the Dockerfile.
+
+.TP
+.B Listing Images
+Use the command to see all available images.
+
+.TP
+.B Removing Images
+Use the command to remove an image that is no longer needed.
+
+.SH CONCLUSION
+Docker images are essential for creating portable and consistent applications that can run in isolated environments, making development and deployment easier.
