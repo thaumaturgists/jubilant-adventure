@@ -1,0 +1,71 @@
+.TH DOCKER-NETWORKING 1 "December 2024" "Docker Networking Manual"
+.SH NAME
+docker-networking \- Understanding Docker Networking
+
+.SH DESCRIPTION
+Docker networking is a crucial aspect of containerized applications, allowing containers to communicate with each other and with external systems. This manual provides an overview of the main components of Docker networking, explained in simple terms.
+
+.SH COMPONENTS
+
+.TP
+.B Bridge Network
+The default network type for Docker containers, similar to a playground where all containers can communicate easily. When a new container is created, it automatically joins this network.
+
+.TP
+.B Host Network
+A mode where a container shares the host's network stack, allowing it to communicate directly with the host. This can improve performance but reduces isolation.
+
+.TP
+.B Overlay Network
+Used for multi-host networking, allowing containers on different Docker hosts to communicate. This is like a bus system connecting students from different schools.
+
+.TP
+.B Macvlan Network
+Allows a container to have its own MAC address, making it appear as a physical device on the network. This is useful for applications that require direct access to the physical network.
+
+.TP
+.B None Network
+A mode where a container has no network access, isolating it completely. This is useful for certain use cases where isolation is required.
+
+.SH KEY CONCEPTS
+
+.TP
+.B Network Drivers
+Different types of networks implemented by Docker, each with its own configuration options and behavior.
+
+.TP
+.B IP Addressing
+Each container is assigned a unique IP address, similar to giving each student a locker number for easy identification.
+
+.TP
+.B Port Mapping
+Exposing container ports to the host machine, allowing external access to services running inside the container.
+
+.TP
+.B Service Discovery
+A built-in mechanism that allows containers to find and communicate with each other using DNS.
+
+.SH COMMANDS
+
+.TP
+.B docker network create <network-name>
+Creates a new network, similar to setting up a new playground.
+
+.TP
+.B docker network ls
+Lists all available networks, like checking how many playgrounds exist.
+
+.TP
+.B docker network inspect <network-name>
+Inspects a network to see its details, akin to looking at a map of the playground.
+
+.TP
+.B docker network connect <network-name> <container-name>
+Connects a container to a specified network, like inviting a new student to join the playground.
+
+.TP
+.B docker network disconnect <network-name> <container-name>
+Disconnects a container from a specified network, similar to telling a student they can’t play in the playground anymore.
+
+.SH CONCLUSION
+Docker networking is essential for deploying and managing containerized applications effectively. It enables containers to communicate with each other and the outside world using various network types to ensure efficient interaction.
