@@ -1,0 +1,41 @@
+.\" Manpage for Understanding Pull Request Reviews
+.TH PULL-REQUEST-REVIEWS-KIDS 1 "December 2024" "1.0" "Understanding Pull Request Reviews" 
+.SH NAME
+pull_request_reviews \- A guide to requiring pull request reviews before merging in a repository
+
+.SH SYNOPSIS
+pull_request_reviews
+
+.SH DESCRIPTION
+This manual page explains the concept of requiring pull request reviews before merging code in a repository, using simple analogies to make it easy to understand.
+
+.SH REPOSITORY
+A **repository** (or repo) is like a big box where you keep all your toys. It holds all the files and code for a project.
+
+.SH PULL REQUEST
+A **pull request** is a way for programmers to ask others to look at their changes before they become part of the main project. It’s like saying, "Hey, I want to add this new toy (or code) to our box. Can you check it out and tell me what you think?"
+
+.SH WHY REVIEWS ARE IMPORTANT
+Getting a review is important because it helps ensure that the new toy (or code) is good and that everyone agrees it should be added. Imagine if you just added any toy without asking your friends; they might not like it, or it might not fit in the box!
+
+.SH BRANCH
+A **branch** is like a separate part of your toy box where you can play with new toys without messing up the main box. It allows you to keep your changes separate until you’re ready to show them to everyone.
+
+.SH BRANCH PROTECTION RULES
+**Branch protection rules** are like putting a sign on the box that says, "You need to ask for permission before adding anything!" This ensures that every time someone wants to add a new toy (or code) to the main box, they have to get approval first.
+
+.SH STEPS TO SET UP BRANCH PROTECTION RULES
+1. **Go to Your Repository**: Open your toy box to see what’s inside.
+2. **Access Settings**: Look for the rules you have for your toy box.
+3. **Branch Protection Rules**: Create a new rule to check with each other before adding new toys.
+4. **Add a Branch Protection Rule**: Write down the new rule for the main part of the box (the main branch).
+5. **Specify the Branch**: Indicate which part of the box this rule applies to.
+6. **Require Pull Request Reviews**: State that before anyone can add a new toy, they need to show it to at least one friend (or more) and get their thumbs up!
+7. **Additional Options**: Add more rules if needed, like ensuring the toy is in good shape.
+8. **Save Changes**: Write down the rules and make sure everyone knows about them.
+
+.SH CONCLUSION
+Now, whenever someone wants to add a new toy (or code) to the main box, they have to get it checked by their friends first. This process helps everyone work together better and keeps the project in good shape.
+
+.SH AUTHOR
+Written by Patrick Connor Adams (thaumaturgists).
