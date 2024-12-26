@@ -1,0 +1,116 @@
+.\" Manpage for Docker for Kids
+.TH DOCKER 1 "December 2024" "1.0" "Docker for Kids Manual"
+.SH NAME
+Docker \- A fun way to understand Docker for kids
+
+.SH SYNOPSIS
+.B docker
+.I command
+.RI [ options ] 
+.I image
+.RI [ container_name ]
+
+.SH DESCRIPTION
+Docker is like a super cool toy box for computer programs. It helps you keep all your programs organized and makes sure they work the same way no matter where you take them.
+
+.SH KEY COMPONENTS
+
+.TP
+.B Images
+Think of an image like a recipe for a cake. It tells the computer what it needs to run a program. Images can be pulled from Docker Hub, a store for these recipes.
+
+.TP
+.B Containers
+A container is like a cake made from the recipe (image). When you run a container, you’re using the image to create a working version of the program. Containers are isolated, meaning they don’t mess with each other.
+
+.TP
+.B Dockerfile
+A Dockerfile is a detailed recipe that tells you how to make a specific cake. It includes all the steps needed to build an image.
+
+.TP
+.B Volumes
+Volumes are like special boxes for keeping important data safe. They store data that you want to keep even if you stop or remove a container.
+
+.TP
+.B Networks
+Networks allow containers to communicate with each other, like a group of friends playing together.
+
+.SH BASIC DOCKER COMMANDS
+
+.TP
+.B docker pull [image]
+Pulls an image from Docker Hub to your local machine.
+
+.TP
+.B docker images
+Lists all the images you have in your local toy box.
+
+.TP
+.B docker run [options] [image]
+Creates and starts a container from a specified image.
+
+.TP
+.B docker ps
+Lists all running containers.
+
+.TP
+.B docker exec -it [container_name] [command]
+Executes a command inside a running container.
+
+.TP
+.B docker stop [container_name]
+Stops a running container.
+
+.TP
+.B docker start [container_name]
+Starts a stopped container.
+
+.TP
+.B docker rm [container_name]
+Removes a stopped container from your local machine.
+
+.TP
+.B docker logs [container_name]
+Views the logs of a container.
+
+.TP
+.B docker build [options] [path]
+Builds a Docker image from a Dockerfile located at the specified path.
+
+.SH EXAMPLE WORKFLOW
+
+1. Pull an image:
+   Use the command:
+   .B docker pull chocolate_cake_image
+   to get the chocolate cake recipe.
+
+2. Run a container:
+   Use the command:
+   .B docker run -d -p 80:80 --name my_chocolate_cake chocolate_cake_image
+   to bake the cake.
+
+3. Check running containers:
+   Use the command:
+   .B docker ps
+   to see all the cakes you have on the table.
+
+4. View logs:
+   Use the command:
+   .B docker logs my_chocolate_cake
+   to check how the baking process went.
+
+5. Stop the container:
+   Use the command:
+   .B docker stop my_chocolate_cake
+   to put the cake back in the fridge.
+
+6. Remove the container:
+   Use the command:
+   .B docker rm my_chocolate_cake
+   to clean up and throw away the cake.
+
+.SH SUMMARY
+Docker is a fun and efficient way to manage computer programs, making it easy to pull images, run containers, and share them with others. It’s like having a toy box that keeps everything organized and ready to play with!
+
+.SH SEE ALSO
+docker(1), dockerhub(1)
