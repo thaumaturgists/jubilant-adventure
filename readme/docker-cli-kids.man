@@ -114,3 +114,6 @@ Docker is a fun and efficient way to manage computer programs, making it easy to
 
 .SH SEE ALSO
 docker(1), dockerhub(1)
+
+.SH AUTHOR
+Written by Patrick Connor Adams (thaumaturgists).
