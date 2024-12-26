@@ -14,7 +14,7 @@ To get started with this project, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/jubilant-adventure.git
+   git clone https://github.com/thaumaturgists/jubilant-adventure.git
    cd jubilant-adventure
    ```
    
