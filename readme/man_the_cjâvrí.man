@@ -1,5 +1,5 @@
 .\" Manpage for man
-.TH MAN CJÂVRÍ 1 "December 2024" "1.0" "User Commands"
+.TH MAN-THE-CJÂVRÍ 1 "December 2024" "1.0" "User Commands"
 .SH NAME
 man \- format and display the manual pages
 .SH SYNOPSIS
