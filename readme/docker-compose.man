@@ -88,10 +88,3 @@ Docker documentation: https://docs.docker.com/compose/
 
 .SH AUTHOR
 Jubilant Adventure Docker Community
-```
-
-### Instructions for Use
-1. Save the above text into a file named `docker-compose.1`.
-2. You can view it using the `man` command by running:
-   ```bash
-   man ./docker-compose.1
