@@ -36,7 +36,7 @@ The wiki will contain detailed documentation on the following topics:
 Contributions are welcome! If you have suggestions or improvements, please feel free to open an issue or submit a pull request.
 
 ### License
-This project is licensed under the Creative Commons Zero v1.0 Universal. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/). See the [LICENSE](LICENSE) file for more details.
 
 ### Contact
 For any inquiries, please reach out to [Connor](mailto:pcadams313@gmail.com).
