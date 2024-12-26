@@ -1,0 +1,85 @@
+.\" Manpage for Oslacrymal GitHub Actions: Normalcy Pausing and Controlling Workflows
+.TH OSLACRYMAL-KIDS 1 "December 2024" "1.0" "Oslacrymal GitHub Actions Manual for Kids" 
+.SH NAME
+oslacrymal-kids \- Understanding GitHub Actions: Normalcy Pausing and Controlling Workflows
+
+.SH DESCRIPTION
+This manual provides an overview of how to pause and control workflows in GitHub Actions, using simple analogies to make the concepts easy to understand.
+
+.SH 1. DISABLING THE WORKFLOW
+Imagine you have a robot that does chores for you every day. Sometimes, you might want the robot to take a break. Disabling a workflow is like telling the robot, "Hey, you don’t have to do any chores for a while."
+
+.PP
+To disable a workflow:
+.TP
+.B Go to your GitHub repository
+(think of it as your special place where you keep all your projects).
+.TP
+.B Click on the "Actions" tab
+(this is where you can see all the chores your robot can do).
+.TP
+.B Find the specific workflow
+(the chore) you want to pause.
+.TP
+.B Click on it, and then look for the three dots
+(like a menu) in the corner.
+.TP
+.B Choose "Disable workflow"
+(this tells the robot to stop working on that chore).
+
+.SH 2. USING WORKFLOW DISPATCH
+Now, let’s say you want to control when your robot does a specific chore. You can set it up so that the robot only works when you press a button. This is called "workflow dispatch."
+
+.PP
+To set it up, write a special note (YAML file) that tells the robot when to work. In this note, you say, "Only do this chore when I press the button."
+
+.PP
+Here’s a simple example:
+.nf
+.B name: Manual Trigger Workflow
+.on:
+.B workflow_dispatch:  # This means "only work when I say so"
+.jobs:
+.B build:  # This is the name of the chore
+.B runs-on: ubuntu-latest  # This tells the robot what kind of machine to use
+.steps:  # These are the steps the robot will follow
+.B - name: Checkout code  # First step: get the stuff it needs
+.B uses: actions/checkout@v2  # This is like saying "go get my toys"
+.B - name: Run a script  # Second step: do the actual chore
+.B run: echo "This is a manual trigger workflow."  # This is what the robot says when it finishes
+.fi
+
+.SH 3. CONDITIONAL EXECUTION
+Sometimes, you might want your robot to do a chore only if certain things are true. For example, "Only clean my room if it’s messy." This is called conditional execution.
+
+.PP
+How it works:
+.TP
+- You can add rules in your note that say, "If this condition is true, then do the chore."
+.TP
+- This way, the robot checks if it should work or not based on what’s happening.
+
+.SH 4. PAUSING A JOB
+If you want to pause a specific job (like a chore) temporarily, you can add a step that says, "Wait for my approval before continuing." This is like telling your robot, "Finish this part, but wait for me to say it’s okay to keep going."
+
+.PP
+To do this:
+.TP
+- Set up a special step in your workflow that requires you to give a thumbs-up before the robot continues.
+
+.SH SUMMARY
+In summary:
+.TP
+- Disabling a workflow is like telling your robot to take a break.
+.TP
+- Using workflow dispatch is like having a button that you press to make the robot work.
+.TP
+- Conditional execution is like giving the robot rules about when to do chores.
+.TP
+- Pausing a job is like making the robot wait for your approval before it continues.
+
+.PP
+This way, you can control how and when your robot (or GitHub Actions) does its work!
+
+.SH AUTHOR
+Written by Patrick Connor Adams (thaumaturgists).
