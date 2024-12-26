@@ -1,5 +1,5 @@
 .\" Manpage for GitHub Wiki Setup Guide
-.TH GITHUB WIKI SETUP 1 "December 2024" "1.0" "GitHub Wiki Setup Guide"
+.TH GITHUB-WIKI-SETUP 1 "December 2024" "1.0" "GitHub Wiki Setup Guide"
 .SH NAME
 GitHub Wiki Setup \- A guide to creating and managing a GitHub Wiki for project documentation.
 
