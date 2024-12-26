@@ -1,6 +1,6 @@
-.TH DOCKER-COMPOSE 1 "December 2024" "Docker Compose Manual" "User Commands"
+.TH DOCKER-COMPOSE-YMAL 1 "December 2024" "Docker Compose Manual" "User Commands"
 .SH NAME
-docker-compose \- Define and run multi-container Docker applications
+docker-compose-ymal \- Define and run multi-container Docker applications
 
 .SH SYNOPSIS
 .B docker-compose
