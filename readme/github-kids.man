@@ -113,3 +113,6 @@ can make your work easier by connecting with other tools and setting up automati
 help you control who can see and change your project, keeping it safe and organized.
 
 By using GitHub effectively, you and your friends can work together on projects, share ideas, and create amazing things while keeping everything organized and safe!
+
+.SH AUTHOR
+Written by Patrick Connor Adams (thaumaturgists).
