@@ -1,5 +1,5 @@
 .\" Man page for Understanding Custom Sidebars
-.TH CUSTOM-SIDEBAR 1 "December 2024" "Custom Sidebar Manual"
+.TH GITHUB-WIKI-CUSTOM-SIDEBAR 1 "December 2024" "Custom Sidebar Manual"
 .SH NAME
 custom-sidebar \- A guide to understanding custom sidebars in wikis
 
