@@ -1,5 +1,5 @@
 .\" Man page for setting up a GitHub Actions workflow for Docker
-.TH DOCKER-WORKFLOW 1 "December 2024" "1.0" "GitHub Actions Workflow Manual"
+.TH DOCKER-RUOK-WORKFLOW 1 "December 2024" "1.0" "GitHub Actions Workflow Manual"
 .SH NAME
 docker-workflow \- Set up a GitHub Actions workflow for building and pushing a Docker image
 
