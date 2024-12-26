@@ -1,7 +1,7 @@
 .\" Manpage for Docker for Kids
-.TH DOCKER 1 "December 2024" "1.0" "Docker for Kids Manual"
+.TH DOCKER-CLI-KIDS 1 "December 2024" "1.0" "Docker for Kids Manual"
 .SH NAME
-Docker \- A fun way to understand Docker for kids
+Docker CLI Kids \- A fun way to understand Docker for kids
 
 .SH SYNOPSIS
 .B docker
