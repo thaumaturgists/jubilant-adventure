@@ -1,5 +1,5 @@
 .\" Man page for understanding cat for man
-.TH MAN THE CAT HELP 1 "December 2024" "1.0" "User Commands"
+.TH MAN-THE-CAT-HELP 1 "December 2024" "1.0" "User Commands"
 .SH NAME
 manpages \- Understanding Man Pages and Commands
 .SH SYNOPSIS
