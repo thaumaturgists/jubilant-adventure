@@ -27,7 +27,7 @@ To get started with this project, follow these steps:
 ### Documentation
 The wiki will contain detailed documentation on the following topics:
 - [Docker Basics](https://github.com/thaumaturgists/jubilant-adventure/wiki/Docker-Basics)
-- Setting Up Docker Compose
+- [Setting Up Docker Compose](https://github.com/thaumaturgists/jubilant-adventure/wiki/Setting-Up-Docker-Compose)
 - Best Practices for Containerization
 - GitHub Workflows
 - Project Structure and Organization
