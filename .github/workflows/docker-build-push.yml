@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
       - name: Run a script
         run: echo "This is a manual trigger workflow."
 
@@ -21,16 +21,25 @@ jobs:
         id: wait_for_approval
         run: |
           echo "Waiting for approval..."
-          # Loop until the approval condition is met
-          while true; do
+          MAX_RETRIES=33  # Maximum number of retries
+          RETRY_COUNT=0
+          SLEEP_DURATION=333  # Wait time in seconds between checks
+
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
             # Check for a specific file or condition
             if [ -f "approve.txt" ]; then
               echo "Approval received."
               break
             fi
             echo "Approval not yet received. Waiting..."
-            sleep 300  # Wait for 300 seconds before checking again
+            sleep $SLEEP_DURATION  # Wait for the specified duration
+            RETRY_COUNT=$((RETRY_COUNT + 1))
           done
+
+          if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+            echo "Approval not received within the allowed time. Failing the job."
+            exit 1  # Fail the job if maximum retries reached
+          fi
 
   docker:  # This is the Docker build and push job
     runs-on: ubuntu-latest
