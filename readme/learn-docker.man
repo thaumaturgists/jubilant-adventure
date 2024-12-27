@@ -1,4 +1,4 @@
-.TH DOCKER 1 "December 2024" "Learning Docker: A Simple Guide" "User Commands"
+.TH LEARN-DOCKER 1 "December 2024" "Learning Docker: A Simple Guide" "User Commands"
 .SH NAME
 docker \- A simple guide to understanding Docker
 

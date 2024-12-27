@@ -5,16 +5,16 @@
 This project aims to progress my learning R using Docker on GitHub and setting up a wiki with heavily detailed documentation.
 
 ### Project Goals
-- **[Learn Docker](readme/Learn_Docker.man)**: Gain a comprehensive understanding of Docker, including containerization, images, and orchestration.
-- **[GitHub Integration](readme/GitHub_Integration.man)**: Explore how to effectively use GitHub for version control and collaboration.
-- **[Wiki Setup](readme/GitHub_Wiki_Setup.man)**: Create a detailed wiki to document the learning process, project structure, and any relevant information.
+- **[Learn Docker](https://github.com/thaumaturgists/jubilant-adventure/wiki/Docker%E2%80%900:-A-Simple-Guide)**: Gain a comprehensive understanding of Docker, including containerization, images, and orchestration.
+- **[GitHub Integration](https://github.com/thaumaturgists/jubilant-adventure/wiki/GitHub-Integration)**: Explore how to effectively use GitHub for version control and collaboration.
+- **[Wiki Setup](https://github.com/thaumaturgists/jubilant-adventure/wiki/Wiki%E2%80%90-GitHub-Wiki-Setup-Guide)**: Create a detailed wiki to document the learning process, project structure, and any relevant information.
 
 ### Getting Started
 To get started with this project, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/jubilant-adventure.git
+   git clone https://github.com/thaumaturgists/jubilant-adventure.git
    cd jubilant-adventure
    ```
    
@@ -26,8 +26,8 @@ To get started with this project, follow these steps:
 
 ### Documentation
 The wiki will contain detailed documentation on the following topics:
-- Docker Basics
-- Setting Up Docker Compose
+- [Docker Basics](https://github.com/thaumaturgists/jubilant-adventure/wiki/Docker-Basics)
+- [Setting Up Docker Compose](https://github.com/thaumaturgists/jubilant-adventure/wiki/Setting-Up-Docker-Compose)
 - Best Practices for Containerization
 - GitHub Workflows
 - Project Structure and Organization
@@ -36,7 +36,7 @@ The wiki will contain detailed documentation on the following topics:
 Contributions are welcome! If you have suggestions or improvements, please feel free to open an issue or submit a pull request.
 
 ### License
-This project is licensed under the Creative Commons Zero v1.0 Universal. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/). See the [LICENSE](LICENSE) file for more details.
 
 ### Contact
 For any inquiries, please reach out to [Connor](mailto:pcadams313@gmail.com).

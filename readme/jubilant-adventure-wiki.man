@@ -1,0 +1,78 @@
+.\" Man page for Jubilant Adventure Wiki
+.TH JUBILANT-ADVENTURE-WIKI 1 "December 2024" "Jubilant Adventure Wiki Manual"
+.SH NAME
+jubilant-adventure-wiki \- A guide to using the Jubilant Adventure Wiki on GitHub
+
+.SH SYNOPSIS
+jubilant-adventure-wiki [OPTIONS]
+
+.SH DESCRIPTION
+The Jubilant Adventure Wiki is a collaborative platform for documenting and sharing information about your project. This manual provides an overview of how to create, edit, and organize content within the Wiki.
+
+.SH CREATING A NEW PAGE
+To create a new page, click on "Create New Page." This opens a blank page where you can give it a title and start writing.
+
+.SH HOME
+The "Home" page serves as the cover of your Wiki. It is the first thing visitors see and usually contains a welcome message and links to other important pages.
+
+.SH WRITING CONTENT
+Click "Write" to start typing your content. You can write stories, facts, or instructions here.
+
+.SH PREVIEW
+Use the "Preview" button to see how your content will look when published. This helps you check formatting before saving.
+
+.SH EDIT MODE
+Edit mode allows you to format your text using Markdown. Key components include:
+
+.TP
+.B Markdown
+A lightweight markup language for formatting text.
+
+.TP
+.B Block Elements
+These include paragraphs, headers, blockquotes, lists, code blocks, and horizontal rules.
+
+.TP
+.B Formatting Guidelines
+- Paragraphs: Leave a blank line between blocks of text.
+- Headers: Use `#` for big titles and `##` for smaller titles.
+- Blockquotes: Start a line with `>`.
+- Lists: Use `*`, `-`, or `+` for bullet points.
+- Code Blocks: Use backticks (`` ` ``) for inline code and triple backticks (```` ``` ````) for multi-line code.
+- Horizontal Rules: Use three dashes (`---`) on a new line.
+
+.SH WELCOME MESSAGE
+The welcome message greets visitors and invites them to explore the Wiki.
+
+.SH ATTACHING FILES
+You can attach files by dragging and dropping them into the editor or selecting them from your computer.
+
+.SH EDIT MESSAGE
+When saving changes, provide a brief note about what you modified.
+
+.SH INITIAL HOME PAGE
+This is the first page of your Wiki, setting the stage for all other content.
+
+.SH ORGANIZING YOUR WIKI
+To keep your Wiki organized:
+- Create a Table of Contents with links to important pages.
+- Use categories to group related content.
+- Link between pages for easy navigation.
+
+.SH COLLABORATING WITH OTHERS
+Invite friends to help edit the Wiki. They can leave comments and track changes, allowing for collaborative editing.
+
+.SH SAVING AND PUBLISHING
+- Save your work to make changes visible to others.
+- Publish changes to make them live for all visitors.
+
+.SH FINAL TIPS
+- Keep writing simple and clear.
+- Use images and examples to enhance understanding.
+- Be creative with formatting and content.
+
+.SH SEE ALSO
+Markdown documentation, GitHub Wiki guidelines.
+
+.SH AUTHOR
+Jubilant Adventure Wiki Team

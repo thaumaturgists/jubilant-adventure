@@ -1,5 +1,5 @@
 .\" Manpage for Windows 11 Help and Documentation
-.TH WINDOWS_11_CJÂVRÍ_MAN 1 "December 2024" "User Manual" "Windows 11 Cjâvrí Man"
+.TH WINDOWS-11-MAN 1 "December 2024" "User Manual" "Windows 11 Cjâvrí Man"
 .SH NAME
 windows_11_help \- Finding Help and Documentation in Windows 11
 

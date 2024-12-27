@@ -1,0 +1,113 @@
+.\" Man page for Docker Compose for Kids
+.TH DOCKER-COMPOSE-KIDS 1 "December 2024" "1.0" "Docker Compose for Kids Manual" 
+.SH NAME
+docker-compose-kids \- Understanding Docker Compose for Kids
+
+.SH SYNOPSIS
+docker-compose-kids
+
+.SH DESCRIPTION
+Docker Compose is a tool that helps you manage multiple applications (toys) that need to work together. It allows you to set up, run, and clean up applications easily.
+
+.SH COMPONENTS
+
+.TP
+.B Docker
+Docker is like a toy box that holds applications and all the things they need to run. Each application is like a different toy, and Docker keeps them organized.
+
+.TP
+.B Docker Compose
+Docker Compose is like a set of instructions that tells you how to set up all your toys (applications) together so they can play nicely.
+
+.TP
+.B docker-compose.yml
+This is a recipe card that tells Docker Compose what toys (applications) to use, how to set them up, and how they should talk to each other.
+
+.SH SECTIONS
+
+.TP
+.B Version
+Specifies which version of the recipe you’re using. For example:
+.nf
+version: '3.8'
+.fi
+
+.TP
+.B Services
+Services are the different toys in your playset. Each service is a separate toy that does something special.
+
+.TP
+.B Web Service
+The web service is like a castle where people can visit. It uses a special toy called Nginx to show web pages.
+
+.TP
+.B Image
+Specifies which toy to use. For example, "nginx:latest" means the newest version of the Nginx toy.
+
+.TP
+.B Ports
+Defines how to access the service. For example:
+.nf
+ports:
+  - "8080:80"
+.fi
+This means you can access the web service through port 8080 on your computer.
+
+.TP
+.B Volumes
+Specifies storage areas for the application. For example:
+.nf
+volumes:
+  - ./html:/usr/share/nginx/html
+.fi
+This tells it to look in a folder called `html` on your computer.
+
+.TP
+.B Redis Service
+A special toy that keeps track of things, like scores in a game.
+
+.SH COMMANDS
+
+.TP
+.B docker-compose up
+Starts all the services defined in the docker-compose.yml file.
+
+.TP
+.B docker-compose down
+Stops all running services and cleans up.
+
+.TP
+.B docker-compose logs
+Displays the logs of the services, like a diary of what they have been doing.
+
+.TP
+.B docker-compose up --scale web=3
+Creates multiple instances of the web service, like having three castles instead of one.
+
+.SH EXAMPLES
+
+To start your application, run:
+.nf
+docker-compose up
+.fi
+
+To stop your application, run:
+.nf
+docker-compose down
+.fi
+
+To see the logs, run:
+.nf
+docker-compose logs
+.fi
+
+To scale the web service, run:
+.nf
+docker-compose up --scale web=3
+.fi
+
+.SH CONCLUSION
+Docker Compose helps organize and manage applications (toys) in a fun and easy way. You can set them up, run them, and clean them up whenever you want, just like playing with your favorite toys!
+
+.SH AUTHOR
+Written by Patrick Connor Adams (thaumaturgists).

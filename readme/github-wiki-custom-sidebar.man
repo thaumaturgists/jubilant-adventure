@@ -1,0 +1,57 @@
+.\" Man page for Understanding Custom Sidebars
+.TH GITHUB-WIKI-CUSTOM-SIDEBAR 1 "December 2024" "Custom Sidebar Manual"
+.SH NAME
+custom-sidebar \- A guide to understanding custom sidebars in wikis
+
+.SH SYNOPSIS
+custom-sidebar [OPTIONS]
+
+.SH DESCRIPTION
+A custom sidebar is a navigational element in a wiki that helps users find information quickly and easily. This manual explains the components of a custom sidebar and their importance.
+
+.SH WHAT IS A CUSTOM SIDEBAR?
+A custom sidebar is like a special list on the side of wiki pages that helps users find things quickly. It acts as a treasure map, guiding users through the content.
+
+.SH WHY USE A SIDEBAR?
+A sidebar is helpful because it makes it easier for people to find what they’re looking for without flipping through every page. The sidebar has several important parts:
+
+.SH COMPONENTS OF A SIDEBAR
+.TP
+.B Navigation Links
+These are like signposts pointing to different pages in the wiki. They save time and make it easier to find specific topics.
+
+.TP
+.B Organization
+The sidebar groups similar topics together, making it easier to locate information, just like organizing toys into separate boxes.
+
+.TP
+.B Quick Access to Resources
+Links to helpful websites or tools related to the project. This provides extra help or information that isn’t in the wiki.
+
+.TP
+.B Highlighting Important Information
+The sidebar can display important messages, announcements, or updates, ensuring users see critical information right away.
+
+.TP
+.B Search Functionality
+Some sidebars include a search box where users can type in what they’re looking for, helping them find specific information quickly.
+
+.TP
+.B Consistent User Experience
+The sidebar maintains the same layout on every page, making it easier for users to navigate and understand the content.
+
+.SH EXAMPLE OF SIDEBAR CONTENT
+A typical sidebar might include:
+- Links to major sections (e.g., “Getting Started” or “Documentation”).
+- A table of contents for the current page.
+- Links to related projects.
+- Contact information for questions or support.
+
+.SH CONCLUSION
+In summary, a custom sidebar is a helpful guide that makes exploring a wiki easier. It helps users find what they need quickly, keeps information organized, and ensures important updates are not missed.
+
+.SH SEE ALSO
+Wiki documentation, navigation best practices.
+
+.SH AUTHOR
+Jubilant Adventure Team

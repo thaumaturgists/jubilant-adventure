@@ -1,0 +1,121 @@
+.TH DOCKERFILE-BASICS 1 "December 2024" "Dockerfile Basics" "User Commands"
+.SH NAME
+dockerfile \- Basics of Dockerfile
+
+.SH SYNOPSIS
+.B dockerfile
+.RI [ options ]
+
+.SH DESCRIPTION
+A Dockerfile is a text document that contains all the commands to assemble an image. It serves as a recipe for creating Docker images, which can be shared and run in containers.
+
+.SH COMPONENTS
+The following are the key components of a Dockerfile:
+
+.TP
+.B FROM
+Specifies the base image to use for the Docker image. For example, 
+.RI "FROM ubuntu:20.04" 
+indicates that the base image is Ubuntu 20.04.
+
+.TP
+.B RUN
+Executes commands in a new layer on top of the current image and commits the results. For example, 
+.RI "RUN apt-get update && apt-get install -y python3" 
+installs Python 3.
+
+.TP
+.B COPY
+Copies files or directories from the host filesystem into the Docker image. For example, 
+.RI "COPY . /app" 
+copies everything from the current directory to the `/app` directory in the image.
+
+.TP
+.B ADD
+Similar to COPY, but can also extract compressed files and fetch files from URLs. For example, 
+.RI "ADD myapp.tar.gz /app" 
+adds and extracts a tarball into the `/app` directory.
+
+.TP
+.B CMD
+Specifies the default command to run when a container is started from the image. For example, 
+.RI "CMD [\"python3\", \"app.py\"]" 
+runs the `app.py` script using Python 3.
+
+.TP
+.B ENTRYPOINT
+Sets the main command to run when the container starts. For example, 
+.RI "ENTRYPOINT [\"python3\"]" 
+indicates that the container will always run Python.
+
+.TP
+.B ENV
+Sets environment variables in the container. For example, 
+.RI "ENV APP_ENV=production" 
+defines an environment variable `APP_ENV` with the value `production`.
+
+.TP
+.B EXPOSE
+Documents the port on which the container will listen for connections. For example, 
+.RI "EXPOSE 5000" 
+indicates that the application will be available on port 5000.
+
+.TP
+.B WORKDIR
+Sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD commands that follow it. For example, 
+.RI "WORKDIR /app" 
+sets the working directory to `/app`.
+
+.TP
+.B VOLUME
+Creates a mount point with the specified path and marks it as holding externally mounted volumes from native host or other containers. For example, 
+.RI "VOLUME [\"/data\"]" 
+creates a volume at `/data`.
+
+.SH EXAMPLE
+Here is a simple example of a Dockerfile for a Python application:
+
+.nf
+.B .dockerfile
+# Use the official Python image from the Docker Hub
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY requirements.txt .
+
+# Install the dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the application port
+EXPOSE 5000
+
+# Define the command to run the application
+CMD ["python", "app.py"]
+.fi
+
+.SH BUILDING AND RUNNING
+To build the Docker image, use the following command:
+
+.nf
+.B docker build -t my-chocolate-cake .
+.fi
+
+To run the Docker image, use:
+
+.nf
+.B docker run -p 5000:5000 my-chocolate-cake
+.fi
+
+.SH CONCLUSION
+A Dockerfile is a powerful tool for creating and sharing applications in a consistent manner. By understanding its components, you can create your own Docker images tailored to your applications.
+
+.SH SEE ALSO
+.B docker(1)
+.B docker-build(1)
+.B docker-run(1)

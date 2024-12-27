@@ -1,5 +1,5 @@
 .\" Man page for the man command
-.TH MAN 1 "December 2024" "1.0" "User Commands"
+.TH MAN-MACOS 1 "December 2024" "1.0" "User Commands"
 .SH NAME
 man \- display the manual pages for commands
 .SH SYNOPSIS

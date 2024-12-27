@@ -1,0 +1,212 @@
+.TH DOCKER-COMPOSE-YMAL 1 "December 2024" "Docker Compose Manual" "User Commands"
+.SH NAME
+docker-compose-ymal \- Define and run multi-container Docker applications
+
+.SH SYNOPSIS
+.B docker-compose
+[\fIoptions\fR] [\fIcommand\fR] [\fIargs\fR]
+
+.SH DESCRIPTION
+Docker Compose is a tool for defining and running multi-container Docker applications using a YAML file. It allows you to manage services, networks, and volumes in a simple and efficient manner.
+
+.SH COMPONENTS
+
+.TP
+.B Version
+Specifies the version of the Docker Compose file format. Different versions may support different features.
+Example:
+.RS
+version: '3.8'
+.RE
+
+.TP
+.B Services
+Defines the different containers (services) that make up your application. Each service can have various configuration options.
+Example:
+.RS
+services:
+  web:
+    image: nginx:latest
+.RE
+
+.TP
+.B Key Options for Services
+.IP \[bu] 2
+.B image
+Specifies the Docker image to use for the service.
+
+.IP \[bu] 2
+.B build
+Defines how to build a custom image from a Dockerfile.
+
+.IP \[bu] 2
+.B ports
+Maps ports from the container to the host.
+
+.IP \[bu] 2
+.B environment
+Sets environment variables for the container.
+
+.IP \[bu] 2
+.B volumes
+Mounts host directories or volumes into the container.
+
+.IP \[bu] 2
+.B depends_on
+Specifies dependencies between services.
+
+.IP \[bu] 2
+.B networks
+Defines which networks the service should connect to.
+
+.TP
+.B Networks
+Defines custom networks that services can use to communicate with each other.
+Example:
+.RS
+networks:
+  my_network:
+    driver: bridge
+.RE
+
+.TP
+.B Volumes
+Defines named volumes that can be shared between services or persist data.
+Example:
+.RS
+volumes:
+  db_data:
+.RE
+
+.TP
+.B Health Checks
+Checks if a service is healthy and ready to accept requests.
+Example:
+.RS
+healthcheck:
+  test: ["CMD", "curl", "-f", "http://localhost/"]
+  interval: 30s
+  timeout: 10s
+  retries: 3
+.RE
+
+.TP
+.B Restart Policies
+Defines rules for restarting services if they stop unexpectedly.
+Example:
+.RS
+restart: always
+.RE
+
+.TP
+.B Build Arguments
+Allows passing arguments to the build process.
+Example:
+.RS
+args:
+  NODE_ENV: production
+.RE
+
+.TP
+.B Secrets and Configs
+Manages sensitive information securely.
+Example:
+.RS
+secrets:
+  db_password:
+    file: ./db_password.txt
+.RE
+
+.TP
+.B Extending Services
+Creates new services based on existing ones.
+Example:
+.RS
+app1:
+  extends:
+    service: base_app
+.RE
+
+.TP
+.B Labels
+Adds metadata to services for organization and management.
+Example:
+.RS
+labels:
+  - "role=frontend"
+.RE
+
+.TP
+.B Using Multiple Compose Files
+Combines multiple Compose files for different environments.
+Example:
+.RS
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+.RE
+
+.SH COMMANDS
+.TP
+.B docker-compose up
+Starts the services defined in the YAML file.
+
+.TP
+.B docker-compose down
+Stops and removes the containers, networks, and volumes.
+
+.TP
+.B docker-compose logs
+Displays logs from the services.
+
+.TP
+.B docker-compose exec
+Executes a command in a running container.
+
+.SH EXAMPLES
+Example of a complete `docker-compose.yml` file:
+.RS
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    networks:
+      - my_network
+
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - db
+    networks:
+      - my_network
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  db_data:
+.RE
+
+.SH SEE ALSO
+Docker documentation: https://docs.docker.com/compose/
+
+.SH AUTHOR
+Jubilant-Adventure Docker Community
