@@ -1,11 +1,11 @@
 {
-  "name": "my-r-node-app",
+  "name": "packboard",
   "version": "1.0.0",
   "description": "A Node.js application that integrates R for data analysis and visualization.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"No tests specified\" && exit 0"  // You can replace this with actual test command
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [
     "R",
@@ -13,16 +13,31 @@
     "data-analysis",
     "visualization"
   ],
-  "author": "Your Name",
-  "license": "ISC",
+  "author": "Patrick Connor Adams <thaumaturgists@github.com>",
+  "license": "CC0",
   "dependencies": {
-    "express": "^4.17.1",  // Example dependency, add your actual dependencies here
-    "some-other-package": "^1.0.0"  // Replace with actual dependencies
+    "express": "^5.0.0"
   },
-  "devDependencies": {
-    // Add any development dependencies here
-  },
+  "devDependencies": {},
   "engines": {
-    "node": "16.0.0>=23.0.0"  // Specify the minimum Node.js version based on your YAML
+    "node": "16.0.0>=23.0.0"
+  },
+  "testDescriptions": {
+    "userAuthentication": {
+      "description": "Verifies that the user authentication functionality works as expected.",
+      "context": "Executed in a Node.js environment using the Express framework.",
+      "steps": [
+        "Send a POST request to the /login endpoint with valid user credentials.",
+        "Verify that the response status code is 200 OK.",
+        "Check that the response contains a valid authentication token.",
+        "Send a POST request to the /login endpoint with invalid credentials.",
+        "Verify that the response status code is 401 Unauthorized.",
+        "Check that the response message indicates invalid credentials."
+      ],
+      "expectedOutcomes": [
+        "The application should return a success response with a token for valid credentials.",
+        "The application should return an error response for invalid credentials."
+      ]
+    }
   }
 }
