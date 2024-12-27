@@ -1,2 +1,2 @@
 Preceptorial
-Image layers for packboard
+Image/Info layers for packboard
