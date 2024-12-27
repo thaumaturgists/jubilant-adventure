@@ -1,68 +1,49 @@
-name: Combined Workflows
+name: Build and Push Docker Image
 
 on:
-  workflow_dispatch:  # This means "only work when I say so"
-  push:  # This allows the second workflow to trigger on push events
+  push:
+    branches:
+      - main
 
 jobs:
-  manual_trigger:  # This is the manual trigger job
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [16, 17, 18, 19, 20, 21, 22, 23]  # You can specify multiple Node.js versions
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Run a script
-        run: echo "This is a manual trigger workflow."
-
-  approval:  # This job is for manual approval
-    runs-on: ubuntu-latest
-    needs: manual_trigger
-    steps:
-      - name: Wait for Approval
-        id: wait_for_approval
-        run: |
-          echo "Waiting for approval..."
-          MAX_RETRIES=33  # Maximum number of retries
-          RETRY_COUNT=0
-          SLEEP_DURATION=333  # Wait time in seconds between checks
-
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-            # Check for a specific file or condition
-            if [ -f "approve.txt" ]; then
-              echo "Approval received."
-              break
-            fi
-            echo "Approval not yet received. Waiting..."
-            sleep $SLEEP_DURATION  # Wait for the specified duration
-            RETRY_COUNT=$((RETRY_COUNT + 1))
-          done
-
-          if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
-            echo "Approval not received within the allowed time. Failing the job."
-            exit 1  # Fail the job if maximum retries reached
-          fi
-
-  docker:  # This is the Docker build and push job
-    runs-on: ubuntu-latest
-    needs: approval
-    steps:
-      - name: Checkout
         uses: actions/checkout@v4
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          username: ${{ secrets.centromeres }}  # Ensure this is a secret
-          password: ${{ secrets.THAUMATURGISTS }}  # Ensure this is a secret
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./  # Pointing to the root directory where package.json is located
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Build and push
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.centromeres }}
+          password: ${{ secrets.THAUMATURGISTS }}
+
+      - name: Build Docker image
         uses: docker/build-push-action@v6
         with:
-          context: mysubdir  # Adjust this as needed
+          context: .
+          file: ./Dockerfile
           push: true
-          tags: thaumaturgists/canamu:latest  # Replace with your actual Docker Hub username and repo
+          tags: thaumaturgists/canamu:latest
+
       - name: Run Tests (Optional)
-        if: ${{ github.event_name == 'push' }}
         run: |
           docker run --rm thaumaturgists/packboard:latest npm test
