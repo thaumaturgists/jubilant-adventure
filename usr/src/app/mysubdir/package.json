@@ -1,3 +1,28 @@
-pack
-Kleptocratic
-Not to be cofused with thieves
+{
+  "name": "my-r-node-app",
+  "version": "1.0.0",
+  "description": "A Node.js application that integrates R for data analysis and visualization.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"No tests specified\" && exit 0"  // You can replace this with actual test command
+  },
+  "keywords": [
+    "R",
+    "Node.js",
+    "data-analysis",
+    "visualization"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",  // Example dependency, add your actual dependencies here
+    "some-other-package": "^1.0.0"  // Replace with actual dependencies
+  },
+  "devDependencies": {
+    // Add any development dependencies here
+  },
+  "engines": {
+    "node": "16.0.0>=23.0.0"  // Specify the minimum Node.js version based on your YAML
+  }
+}
