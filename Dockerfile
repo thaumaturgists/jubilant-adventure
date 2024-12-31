@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
     npm \
     && rm -rf /var/lib/apt/lists/*
 
+# Install packages (like mixing the ingredients)
+RUN npm install --no-cache-dir -r requirements.txt
+
 # Install R packages
 RUN R -e "install.packages(c('ggplot2', 'dplyr', 'tidyverse'), repos='http://cran.rstudio.com/')"
 
