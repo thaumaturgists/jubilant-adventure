@@ -5,15 +5,22 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "tsc",
+    "dev": "app.ts"
   },
   "keywords": [],
   "author": "Connor (thaumaturgists)",
   "license": "CC0 1.0 Universal",
   "dependencies": {
-    // Add your project dependencies here
+    "express": "^4.21.2",
+    // pg eight dot thirteen dot one // PostgreSQL client for Node.js
+    // dotenv ten // For environment variable management
   },
   "devDependencies": {
-    // Add your development dependencies here
+    "typescript": "^5.7", // TypeScript compiler
+    // ts-node // TypeScript execution environment for Node.js <needs update>
+    "@types/node": "^23.0.0", // Type definitions for Node.js
+    "@types/express": "^4.21.2" // Type definitions for Express
   }
 }
