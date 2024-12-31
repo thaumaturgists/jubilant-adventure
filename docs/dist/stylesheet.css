@@ -46,8 +46,24 @@ body {
 
 .body-header img {
     margin: 20px 0;
-    width: 200px; /* Adjust as needed */
+    max-width: 100%; /* Adjust as needed */
     height: auto;
+    display: block;
+}
+
+.main-content img {
+    margin: 20px 0;
+    max-width: 100%; /* Adjust as needed */
+    height: auto;
+    border-radius: 5%;
+}
+
+.footer-content img {
+    margin: 20px 0;
+    max-width: 95%; /* Adjust as needed */
+    height: auto;
+    border: #337833;
+    border-radius: 15%;
 }
 
 /* Main */
