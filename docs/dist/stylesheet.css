@@ -162,6 +162,43 @@ p {
     font-size: 2em;
 }
 
+/* Table of contents styles */
+.table-of-contents-list {
+    list-style-type: none; /* Remove default numbering */
+    padding-left: 0; /* Remove default padding */
+}
+.table-of-contents-list-1-1 {
+    list-style-type: none; /* Remove default numbering */
+}
+
+.table-of-contents-list li {
+    margin: 5px 0; /* Add some spacing between list items */
+}
+
+.table-of-contents-list a {
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Set link color */
+    font-size: 16px; /* Set font size for links */
+}
+
+.table-of-contents-list a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.section-number {
+    display: inline-block; /* Make it an inline block for better control */
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    line-height: 30px; /* Center text vertically */
+    background-color: #007BFF; /* Background color */
+    color: white; /* Text color */
+    border-radius: 50%; /* Make it circular */
+    text-align: center; /* Center text horizontally */
+    margin-right: 10px; /* Space between number and text */
+    font-weight: bold; /* Make the number bold */
+    font-size: 14px; /* Set font size for the number */
+}
+
 /* Contributing content styles */
 .contributing-content {
     margin: 20px 0;
