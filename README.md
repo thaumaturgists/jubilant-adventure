@@ -2,7 +2,7 @@
 **undauntable(biannulate)**
 
 ## Where it Begins
-This project aims to progress my learning R using Docker on GitHub and setting up a wiki with heavily detailed documentation.
+This project aims to progress my learning R(for distrubiting load differences), using Docker on GitHub, and setting up a wiki with heavily detailed documentation.
 
 ### Project Goals
 - **[Learn Docker](https://github.com/thaumaturgists/jubilant-adventure/wiki/Docker-Basics)**: Gain a comprehensive understanding of Docker, including containerization, images, and orchestration.
