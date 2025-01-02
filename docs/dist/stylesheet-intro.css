@@ -70,3 +70,10 @@ body {
         font-size: 1.5em;
     }
 }
+
+.docker-hub-canamu img {
+    margin: 20px 0;
+    max-width: 33%; /* Adjust as needed */
+    height: auto;
+    display: block;
+}
