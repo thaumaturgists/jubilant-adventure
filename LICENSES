@@ -1,0 +1,21 @@
+# This is a place holder until project is ready to be distributed.
+
+Using a project licensed under CC0-1.0 alongside dependencies that are licensed under the MIT License does not create a conflict. Here's why:
+
+1. **CC0-1.0 License**: This is a public domain dedication, which means you can use, modify, and distribute the work without any restrictions. It effectively allows anyone to do anything with the work, including using it in proprietary projects.
+
+2. **MIT License**: This is a permissive open-source license that allows for similar freedoms. You can use, modify, and distribute software licensed under the MIT License, as long as you include the original copyright notice and license in any substantial portions of the software.
+
+Since both licenses are permissive and allow for broad usage, you can freely use MIT-licensed dependencies in your CC0-1.0 project. Just ensure that you comply with the requirements of the MIT License, such as including the license text and copyright notice when distributing your project. 
+
+In summary, there is no conflict between using CC0-1.0 for your project and MIT-licensed dependencies.
+
+Yes, when you distribute your project, it's a good practice to include all relevant licenses in your `LICENSE` file or in a separate `LICENSES` file. Here’s how you can do it:
+
+1. **CC0-1.0 License**: Include the full text of the CC0-1.0 license in your `LICENSE` file, as this is the license under which your project is released.
+
+2. **MIT License for Dependencies**: Include the full text of the MIT License for each of the dependencies you are using. You should also include the copyright notice for each dependency, as required by the MIT License.
+
+3. **Attribution**: If you are using multiple MIT-licensed dependencies, you can either list them all in the same `LICENSE` file or create a separate `LICENSES` file that contains the licenses for all dependencies. Make sure to clearly indicate which license applies to which part of the code if necessary.
+
+By doing this, you ensure that you are complying with the licensing requirements of the MIT-licensed dependencies while also clearly stating the terms under which your own project is released. This practice promotes transparency and helps users of your project understand their rights and obligations.
