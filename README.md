@@ -35,8 +35,13 @@ The wiki will contain detailed documentation on the following topics:
 ### Contributing
 Contributions are welcome! If you have suggestions or improvements, please feel free to open an issue or submit a pull request.
 
-### License
+### Licenses
+
 This project is licensed under the [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/). See the [LICENSE](LICENSE) file for more details.
+
+This project may also contain dependencies licensed under the [MIT License](https://opensource.org/licenses/MIT). Please see the [LICENSES](LICENSES) file for more details on these dependencies.
+
+Note that dependencies may be added or removed during development, so the LICENSES file will be finalized before distribution.
 
 ### Contact
 For any inquiries, please reach out to [Connor](mailto:pcadams313@gmail.com).
